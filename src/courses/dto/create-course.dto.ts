@@ -1,12 +1,24 @@
-import { IsString } from "class-validator"
+import { IsDecimal, IsNumber, IsOptional, IsString } from "class-validator"
 
 export class CreateCourseDto {
-  @IsString()
-  name: string
+  // readonly name: string
+  // readonly description: string
+  // readonly price: number
+  // readonly tags: string[]
+
+  @IsNumber()
+  readonly id: number
 
   @IsString()
-  description: string
+  readonly name: string
+
+  // @IsOptional()
+  @IsString()
+  readonly description: string
+
+  @IsNumber()
+  readonly price: number
 
   @IsString({ each: true })
-  tags: string[]
+  readonly tags: string[]
 }

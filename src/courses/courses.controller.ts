@@ -26,7 +26,7 @@ export class CoursesController {
   @Patch(':id')
   update(
     @Param('id') id: string,
-    @Body() body: UpdateCourseDto
+    @Body() body
   ) {
     return this.coursesService.update(id, body)
   }
