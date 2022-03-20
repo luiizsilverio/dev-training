@@ -6,6 +6,7 @@ export class CreateCourseDto {
   // readonly price: number
   // readonly tags: string[]
 
+  @IsOptional()
   @IsNumber()
   readonly id: number
 

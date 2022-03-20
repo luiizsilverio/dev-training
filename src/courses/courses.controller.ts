@@ -23,15 +23,15 @@ export class CoursesController {
     return this.coursesService.create(body)
   }
 
-  @Patch(':id')
+  @Patch(':id') // PATCH /courses/:id
   update(
     @Param('id') id: string,
-    @Body() body
+    @Body() body: UpdateCourseDto
   ) {
     return this.coursesService.update(id, body)
   }
 
-  @Delete(':id') // GET /courses/:id
+  @Delete(':id') // DELETE /courses/:id
   remove(@Param() params) {
     return this.coursesService.remove(params.id)
   }
